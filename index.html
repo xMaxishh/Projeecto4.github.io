@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+  <link id="stylesheet" rel="stylesheet" href=" ">
+  <link rel="stylesheet" href="normalize.css">
+</head>
+<script>
+  function loadStylesheet() {
+    let width = window.innerWidth;
+    let stylesheet = document.getElementById('stylesheet');
+
+    if (width < 475) {
+      stylesheet.setAttribute('href', 'mobile.css');
+    } else {
+      stylesheet.setAttribute('href', 'desktop.css');
+    }
+  }
+
+
+  window.addEventListener('DOMContentLoaded', loadStylesheet);
+
+
+  window.addEventListener('resize', loadStylesheet);
+
+</script>
+
+<body>
+
+  <main class="container">
+    <section class="container-result">
+      <h1>Your Result</h1>
+      <p class="resultado"><span>76</span> of 100</p>
+      <h2>Great</h2>
+      <p>You scored higher than 65% of the people who have taken these tests.</p>
+    </section>
+
+    <section class="summary">
+      <h3>Summary</h3>
+      <div id="summary-container">
+
+
+        <!-- 
+      <div class="caja memory">Memory <span class="result"> 92 / 100</span></div>
+
+      <div class="caja verbal">Verbal <span class="result"> 61 / 100</span></div>
+
+      <div class="caja visual">Visual <span class="result"> 72 / 100</span></div> -->
+      </div>
+
+      <button id="submit">Continue</button>
+    </section>
+  </main>
+
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
